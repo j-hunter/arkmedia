@@ -9,8 +9,8 @@ import argparse
 
 # Cell
 class Video:
-    self.link=""
-    self.workingdir = "."
+    link=""
+    workingdir = "."
     def start(self):
         print("ToDo")
         self.fixLink()
@@ -23,7 +23,7 @@ class Video:
 # Cell
 class YTVideo(Video):
     VID_ORDER = {0:'avc', 1:'vp9'}
-    def __init__(self,filename = "temp", ytlink="", tube: YTVideo = None):
+    def __init__(self,filename = "temp", ytlink="", tube: YouTube = None):
         self.vid = None
         self.tempfilename = filename
         if not tube is None:
@@ -104,7 +104,6 @@ class YTVideo(Video):
 
 
 # Cell
-
 def parseCLI():
     progname = "VideoCopy"
     par = argparse.ArgumentParser(progname)
@@ -114,7 +113,10 @@ def parseCLI():
 
     return None
 
+
 # Cell
+# notest
+#print(__name__)
 if __name__ == "__main__":
     job = parseCLI()
     if job:
