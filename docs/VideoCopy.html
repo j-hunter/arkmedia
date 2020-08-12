@@ -58,7 +58,7 @@ sidebar: home_sidebar
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="Video" class="doc_header"><code>class</code> <code>Video</code><a href="https://github.com/j-hunter/arkmedia/tree/master/arkmedia/VideoCopy.py#L11" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Video</code>()</p>
+<h2 id="Video" class="doc_header"><code>class</code> <code>Video</code><a href="https://github.com/j-hunter/arkmedia/tree/master/arkmedia/VideoCopy.py#L12" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Video</code>()</p>
 </blockquote>
 
 </div>
@@ -89,7 +89,7 @@ sidebar: home_sidebar
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="YTVideo" class="doc_header"><code>class</code> <code>YTVideo</code><a href="https://github.com/j-hunter/arkmedia/tree/master/arkmedia/VideoCopy.py#L24" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>YTVideo</code>(<strong><code>filename</code></strong>=<em><code>'temp'</code></em>, <strong><code>ytlink</code></strong>=<em><code>''</code></em>, <strong><code>tube</code></strong>:<code>YouTube</code>=<em><code>None</code></em>) :: <a href="/arkmedia/VideoCopy#Video"><code>Video</code></a></p>
+<h2 id="YTVideo" class="doc_header"><code>class</code> <code>YTVideo</code><a href="https://github.com/j-hunter/arkmedia/tree/master/arkmedia/VideoCopy.py#L33" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>YTVideo</code>(<strong><code>filename</code></strong>=<em><code>'temp'</code></em>, <strong><code>ytlink</code></strong>=<em><code>''</code></em>, <strong><code>tube</code></strong>:<code>YouTube</code>=<em><code>None</code></em>) :: <a href="/arkmedia/VideoCopy#Video"><code>Video</code></a></p>
 </blockquote>
 
 </div>
@@ -116,7 +116,7 @@ sidebar: home_sidebar
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testlink</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/watch?v=S32L8ULLy94&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">testlink</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/watch?v=SSC_7R_F-B8&quot;</span>
 <span class="n">job</span> <span class="o">=</span> <span class="n">YTVideo</span><span class="p">(</span><span class="n">ytlink</span><span class="o">=</span><span class="n">testlink</span><span class="p">)</span>
 <span class="c1">#job.parseStreams()</span>
 <span class="n">jobvid</span> <span class="o">=</span> <span class="n">job</span><span class="o">.</span><span class="n">vid</span>
@@ -207,22 +207,16 @@ sidebar: home_sidebar
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0 &lt;Stream: itag=&#34;137&#34; mime_type=&#34;video/mp4&#34; res=&#34;1080p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.640028&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
 1 &lt;Stream: itag=&#34;248&#34; mime_type=&#34;video/webm&#34; res=&#34;1080p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-2 &lt;Stream: itag=&#34;399&#34; mime_type=&#34;video/mp4&#34; res=&#34;None&#34; fps=&#34;30fps&#34; vcodec=&#34;av01.0.08M.08&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-3 &lt;Stream: itag=&#34;136&#34; mime_type=&#34;video/mp4&#34; res=&#34;720p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d401f&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-4 &lt;Stream: itag=&#34;247&#34; mime_type=&#34;video/webm&#34; res=&#34;720p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-5 &lt;Stream: itag=&#34;398&#34; mime_type=&#34;video/mp4&#34; res=&#34;None&#34; fps=&#34;30fps&#34; vcodec=&#34;av01.0.05M.08&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-6 &lt;Stream: itag=&#34;135&#34; mime_type=&#34;video/mp4&#34; res=&#34;480p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d401f&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-7 &lt;Stream: itag=&#34;244&#34; mime_type=&#34;video/webm&#34; res=&#34;480p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-8 &lt;Stream: itag=&#34;397&#34; mime_type=&#34;video/mp4&#34; res=&#34;None&#34; fps=&#34;30fps&#34; vcodec=&#34;av01.0.04M.08&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-9 &lt;Stream: itag=&#34;134&#34; mime_type=&#34;video/mp4&#34; res=&#34;360p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d401e&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-10 &lt;Stream: itag=&#34;243&#34; mime_type=&#34;video/webm&#34; res=&#34;360p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-11 &lt;Stream: itag=&#34;396&#34; mime_type=&#34;video/mp4&#34; res=&#34;None&#34; fps=&#34;30fps&#34; vcodec=&#34;av01.0.01M.08&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-12 &lt;Stream: itag=&#34;133&#34; mime_type=&#34;video/mp4&#34; res=&#34;240p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d4015&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-13 &lt;Stream: itag=&#34;242&#34; mime_type=&#34;video/webm&#34; res=&#34;240p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-14 &lt;Stream: itag=&#34;395&#34; mime_type=&#34;video/mp4&#34; res=&#34;None&#34; fps=&#34;30fps&#34; vcodec=&#34;av01.0.00M.08&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-15 &lt;Stream: itag=&#34;160&#34; mime_type=&#34;video/mp4&#34; res=&#34;144p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d400c&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-16 &lt;Stream: itag=&#34;278&#34; mime_type=&#34;video/webm&#34; res=&#34;144p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
-17 &lt;Stream: itag=&#34;394&#34; mime_type=&#34;video/mp4&#34; res=&#34;None&#34; fps=&#34;30fps&#34; vcodec=&#34;av01.0.00M.08&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+2 &lt;Stream: itag=&#34;136&#34; mime_type=&#34;video/mp4&#34; res=&#34;720p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d4016&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+3 &lt;Stream: itag=&#34;247&#34; mime_type=&#34;video/webm&#34; res=&#34;720p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+4 &lt;Stream: itag=&#34;135&#34; mime_type=&#34;video/mp4&#34; res=&#34;480p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d4014&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+5 &lt;Stream: itag=&#34;244&#34; mime_type=&#34;video/webm&#34; res=&#34;480p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+6 &lt;Stream: itag=&#34;134&#34; mime_type=&#34;video/mp4&#34; res=&#34;360p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d401e&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+7 &lt;Stream: itag=&#34;243&#34; mime_type=&#34;video/webm&#34; res=&#34;360p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+8 &lt;Stream: itag=&#34;133&#34; mime_type=&#34;video/mp4&#34; res=&#34;240p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d400c&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+9 &lt;Stream: itag=&#34;242&#34; mime_type=&#34;video/webm&#34; res=&#34;240p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+10 &lt;Stream: itag=&#34;160&#34; mime_type=&#34;video/mp4&#34; res=&#34;144p&#34; fps=&#34;30fps&#34; vcodec=&#34;avc1.4d400b&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
+11 &lt;Stream: itag=&#34;278&#34; mime_type=&#34;video/webm&#34; res=&#34;144p&#34; fps=&#34;30fps&#34; vcodec=&#34;vp9&#34; progressive=&#34;False&#34; type=&#34;video&#34;&gt;
 </pre>
 </div>
 </div>
@@ -251,7 +245,7 @@ sidebar: home_sidebar
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="parseCLI" class="doc_header"><code>parseCLI</code><a href="https://github.com/j-hunter/arkmedia/tree/master/arkmedia/VideoCopy.py#L107" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parseCLI</code>()</p>
+<h4 id="parseCLI" class="doc_header"><code>parseCLI</code><a href="https://github.com/j-hunter/arkmedia/tree/master/arkmedia/VideoCopy.py#L129" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>parseCLI</code>()</p>
 </blockquote>
 
 </div>

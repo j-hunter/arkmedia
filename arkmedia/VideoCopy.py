@@ -3,14 +3,16 @@
 __all__ = ['Video', 'YTVideo', 'parseCLI']
 
 # Cell
-from pytube import YouTube
+from pytube import YouTube, Stream, Caption
 import psycopg2 as psql
 import argparse
+from pathlib import Path
 
 # Cell
 class Video:
     link=""
-    workingdir = "."
+    _workingdir = Path('.')
+
     def start(self):
         print("ToDo")
         self.fixLink()
@@ -18,6 +20,13 @@ class Video:
     def fixLink(self):
         pass
 
+    @property
+    def workingdir(self):
+        return self._workingdir
+
+    @workingdir.setter
+    def workingdir(self,newdir):
+        self._workingdir = Path(newdir)
 
 
 # Cell
@@ -34,8 +43,8 @@ class YTVideo(Video):
             self.vid = YouTube(self.link)
 
         self.streams = {}
-        self.captions = {}
-        self.tempfiles = []
+
+        self.tempfiles = {}
 
     def start(self):
         super().start()
@@ -46,7 +55,10 @@ class YTVideo(Video):
     def parseStreams(self):
         self.streams['v'] = self.pickVid()
         self.streams['a'] = self.pickAudio()
-        self.captions = self.parseCaptions()
+        #print(self.streams)
+        caps = self.parseCaptions()
+        #print(caps)
+        self.streams = {**self.streams, **caps}
 
 
     def pickVid(self):
@@ -91,16 +103,26 @@ class YTVideo(Video):
                 #print("auto")
                 lang = 'a-' + lang
             #print(lang)
-            caps[lang] = t
+            caps['c-' + lang] = t
         return caps
 
     def downloadStreams(self):
         for s in self.streams:
-            print (s,self.streams[s])
-            self.streams[s].download()
-        for c in self.captions:
-            print(c,self.captions[c])
-            self.captions[c].download(prefix=c,title = tempfilename,output_path = temppath)
+            st = self.streams[s]
+
+            print (s,st)
+
+            if isinstance(st,Stream):
+                fname = st.download(output_path = self.workingdir, filename = self.tempfilename, filename_prefix = s + '-')
+            else:
+                fname = st.download(filename_prefix=s + '-',title = self.tempfilename,output_path = self.workingdir)
+                file = Path(fname)
+                newname = str(s) + '-' + self.tempfilename + ".srt"
+                newpath = file.parent
+                file.rename(Path(newpath,newname))
+                fname = Path(newpath,newname)
+            print("File: ", fname)
+            self.tempfiles[s] = Path(fname)
 
 
 # Cell
